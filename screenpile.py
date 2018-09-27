@@ -162,12 +162,12 @@ def master_segmentize(segs):
 			if head_dict['terior'] is not None:
 				if len(master_seg) > 0:
 					master_segs.append(master_seg)
-				master_seg = [seg(head_type, head_dict, fleshy_text).__dict__]
+				master_seg = [seg(head_type, head_dict, fleshy_text)._asdict()]
 			else:
-				master_seg.append(seg(head_type, head_dict, fleshy_text).__dict__)
+				master_seg.append(seg(head_type, head_dict, fleshy_text)._asdict())
 
 		elif head_type in {'speaker/title', 'transition'}:
-			master_seg.append(seg(head_type, {head_type: head_text}, fleshy_text).__dict__)
+			master_seg.append(seg(head_type, {head_type: head_text}, fleshy_text)._asdict())
 
 	if len(master_seg) > 0:
 		master_segs.append(master_seg)
