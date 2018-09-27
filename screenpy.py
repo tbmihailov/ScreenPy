@@ -1,3 +1,5 @@
+import time
+
 from dateutil.parser import parse as dateparse
 from screenpy_vars import *
 import sys
@@ -12,10 +14,11 @@ def Log(message):
 
 # if 'sense2vec' not in sys.modules:
 import sense2vec
+start = time.time()
 print('loading sense2vec')
 
-s2v_model = sense2vec.load()
-print('done loading')
+s2v_model = sense2vec.load("resources/reddit_vectors-1.1.0")
+print('done loading ins {0} s'.format(time.time() - start))
 
 
 def loadSpacy():

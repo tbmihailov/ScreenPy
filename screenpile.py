@@ -300,6 +300,15 @@ if __name__ == '__main__':
 
 	# screenplay = 'indianajonesandtheraidersofthelostark.txt'
 	screenplay = 'imsdb_raw_nov_2015/Western/truegrit.txt'
+	if len(sys.argv) > 1:
+		screenplay = sys.argv[1]
+
+	screenplay_out_json = 'truegrit.json'
+	if len(sys.argv) > 2:
+		screenplay_out_json = sys.argv[2]
+
+	print("Processing screenplay {0}".format(screenplay))
+	start = time.time()
 	with open(screenplay, 'r') as fn:
 		play = fn.read()
 
@@ -307,16 +316,25 @@ if __name__ == '__main__':
 	play = play.replace('\t', '        ')
 	text_lines = play.split('\n\n')
 	line_tups = assemble_lines(text_lines)
-	segs = segmentize(line_tups)
-	masta = master_segmentize(segs)
+	print("num line_tups:{0}".format(len(line_tups)))
 
+	segs = segmentize(line_tups)
+	print("num segs:{0}".format(len(segs)))
+
+	masta = master_segmentize(segs)
+	print("num masta:{0}".format(len(masta)))
+
+	print("done in {0} s".format(time.time() - start))
 	# with open('test.json', 'w') as fp:
 	# 	json.dump(masta, fp, indent=4)
 
 	# pickle.dump(masta, open('ij.pkl', 'wb'))
 
 	# with open('indianajonesandtheraidersofthelostark.json', 'w') as fp:
-	with open('truegrit.json', 'w') as fp:
+	with open(screenplay_out_json, 'w') as fp:
 		json.dump(masta, fp, indent=4)
+
+	print("Exported to {0}".format(screenplay_out_json))
+
 
 
