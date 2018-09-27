@@ -1,3 +1,4 @@
+import setuptools
 from setuptools import setup
 import sys
 
@@ -38,7 +39,8 @@ setup(name='screenpy',
       author_email='-',
       license='Apache',
       install_requires=install_requires,
-      scripts=["bin/allennlp"],
+      #scripts=["bin/something"],
+      packages=setuptools.find_packages(),
       setup_requires=install_requires,
       include_package_data=True,
       python_requires='>=3.6.1',
