@@ -97,6 +97,29 @@ Short	|	3	|	189.67	|	4.86	|	0.70	|	39	|	269.3333333	|	138.3333333	|	118	|	8.3333
 
 
 
+# Environment Setup Instruction
+
+1. Create the `parsing` environment using Anaconda
+
+  ```
+  conda create -n screenpy python=3.6
+  ```
+
+2. Activate the environment
+
+  ```
+  source activate screenpy
+  ```
+
+3. Install the requirements in the environment:
+
+  ```
+  pip install -r requirements.txt
+  ```
+
+
+
+
 Development
 ---
 Working on verb sense disambiguation to classify clauses in stage direction with FrameNet frames using off-the-shelf frame-semantic parser [Semafor] (https://github.com/Noahs-ARK/semafor).
