@@ -5,7 +5,7 @@
 from os import listdir, makedirs
 from os.path import isfile, join, exists
 # path = 'D:\\Documents\\NLP corpora\\imsdb_scenes_sep_2012\\imsdb_scenes_clean'
-from screenpile import *
+from screenpy.screenpile import *
 
 
 if __name__ == '__main__':

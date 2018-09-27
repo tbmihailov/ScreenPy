@@ -3,7 +3,7 @@
 # import collections
 from nltk.tree import ParentedTree
 import pickle
-from sentence_splitter import split_into_sentences
+from screenpy.sentence_splitter import split_into_sentences
 # from nltk.tree import Tree
 
 class Word:
@@ -95,7 +95,7 @@ def head_noun(ptree):
 
 		return None
 
-from clockdeco import clock
+from screenpy.clockdeco import clock
 import collections
 
 class Sentence:

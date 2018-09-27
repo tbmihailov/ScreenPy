@@ -1,6 +1,6 @@
 from subprocess import Popen, PIPE
 from collections import namedtuple
-from clockdeco import clock
+from screenpy.clockdeco import clock
 import nltk.data
 from nltk.corpus import wordnet as wn
 

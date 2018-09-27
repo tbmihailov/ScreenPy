@@ -1,4 +1,4 @@
-from screenpy import *
+from screenpy.screenpy_common import *
 
 print('testing SETTING')
 t1 = '               EXT. THE JUNGLE - INDY\'S RUN - CLOSE ANGLE - DAY'

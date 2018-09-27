@@ -11,7 +11,7 @@ of the meaning of the verbs in the text (FrameNet frame + list of WordNet synset
 from os import listdir, makedirs
 from os.path import isfile, join, exists
 # path = 'D:\\Documents\\NLP corpora\\imsdb_scenes_sep_2012\\imsdb_scenes_clean'
-from verb_sense.VSD_withSpacy import sense_profile
+from screenpy.verb_sense import sense_profile
 import json
 
 from shutil import copyfile

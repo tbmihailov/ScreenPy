@@ -7,12 +7,12 @@ The output is used to prune the set of WordNet synsets.
 
 """
 
-from clockdeco import clock
+from screenpy.clockdeco import clock
 from collections import defaultdict
 from nltk.corpus import framenet as fn
 from nltk.corpus import wordnet as wn
-from verb_sense.semafor_api import semafor, semafor_util
-from verb_sense.dep_conll_api import setup_parser as corenlp
+from screenpy.verb_sense import semafor, semafor_util
+from screenpy.verb_sense.dep_conll_api import setup_parser as corenlp
 
 # from verb_sense.clausie_api import clausie, clause_to_synsets, prepare_raw_text
 # from nltk.stem import WordNetLemmatizer

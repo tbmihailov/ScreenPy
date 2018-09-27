@@ -1,5 +1,5 @@
 import socket
-from clockdeco import clock
+from screenpy.clockdeco import clock
 # from nltk.corpus import framenet as fn
 
 """
@@ -86,7 +86,7 @@ def semafor_util(semafor_output):
 
 
 if __name__ == '__main__':
-	from verb_sense.dep_conll_api import setup_parser as corenlp
+	from screenpy.verb_sense.dep_conll_api import setup_parser as corenlp
 
 	# setup parser to listen to 8080
 	# base_path = 'D:/Documents/python/NLP/semafor-master/semafor-master/'

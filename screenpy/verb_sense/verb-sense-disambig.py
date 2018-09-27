@@ -2,7 +2,7 @@ from functools import partial
 from subprocess import Popen, PIPE
 import socket
 
-from clockdeco import clock
+from screenpy.clockdeco import clock
 from nltk.corpus import framenet as fn
 from nltk.corpus import wordnet as wn
 from nltk.stem import WordNetLemmatizer

@@ -1,4 +1,4 @@
-from clockdeco import clock
+from screenpy.clockdeco import clock
 
 from collections import defaultdict
 
@@ -6,7 +6,7 @@ from nltk.corpus import framenet as fn
 from nltk.corpus import wordnet as wn
 
 
-from verb_sense.semafor_api import semafor, semafor_util
+from screenpy.verb_sense import semafor, semafor_util
 
 import spacy
 print('loading spaCy')

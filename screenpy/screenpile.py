@@ -1,5 +1,5 @@
-from screenpy import *
-from clockdeco import clock
+from screenpy.screenpy_common import *
+from screenpy.clockdeco import clock
 # from sentence_splitter import split_into_sentences
 import json
 import pickle

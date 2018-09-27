@@ -1,7 +1,7 @@
 import time
 
 from dateutil.parser import parse as dateparse
-from screenpy_vars import *
+from screenpy.screenpy_vars import *
 import sys
 DO_TEST = 0
 DO_PRINT = 0
