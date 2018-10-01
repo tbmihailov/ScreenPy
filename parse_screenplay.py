@@ -2,7 +2,7 @@ import json
 import sys
 import time
 
-from screenpy.screenpile import annotate
+from screenpy.screenpile import annotate_lines_and_segs_and_master
 
 if __name__ == '__main__':
 	screenplay = 'indianajonesandtheraidersofthelostark.txt'
@@ -15,10 +15,12 @@ if __name__ == '__main__':
 
 	print("Processing screenplay {0}".format(screenplay))
 	start = time.time()
-	with open(screenplay, 'r') as fn:
+	with open(screenplay, 'r', errors="ignore") as fn:
 		play = fn.read()
 
-	masta = annotate(play)
+	tuples, segments, masta = annotate_lines_and_segs_and_master(play)
+
+
 	print("num masta:{0}".format(len(masta)))
 
 	print("done in {0} s".format(time.time() - start))

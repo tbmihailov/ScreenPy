@@ -193,7 +193,7 @@ def assemble_lines(text_lines):
 
 		# prune leading indent
 		relevant_text = tl[leading_indent:]
-		if len(relevant_text)> 57:
+		if len(relevant_text) > 57:
 			relevant_text = relevant_text[:57].strip()
 
 		# check if all capitalized
@@ -292,6 +292,16 @@ def annotate(screenplay):
 	segs = segmentize(line_tups)
 	masta = master_segmentize(segs)
 	return masta
+
+def annotate_lines_and_segs_and_master(screenplay):
+	play = screenplay.replace('\t', '        ')
+
+	line_split = "\n"
+	text_lines = [x for x in play.split(line_split) if len(x) > 0]
+	line_tups = assemble_lines(text_lines)
+	segs = segmentize(line_tups)
+	masta = master_segmentize(segs)
+	return line_tups, segs, masta
 
 if __name__ == '__main__':
 
